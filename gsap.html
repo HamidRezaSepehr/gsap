@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GSAP Animation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <h1>Section 1</h1>
+        </section>
+
+        <section class="section2">
+            <div class="container">
+                <div class="row module-1">
+                    <div class="col-6">
+                        <div class="heading-2">The</div>
+                        <h1 class="heading-1">Curriculum</h1>
+                        <article>
+                            <div class="module">Module 1</div>
+                            <div class="heading-3">React Fundamentals</div>
+                            
+
+                            <p>In this first module, we introduce React, and build a common understanding we'll use throughout the course.</p>
+
+                            <p>We'll learn all about JSX, components, and props. We'll discover how to do iteration and conditional rendering in React. We'll also cover styling in React.</p>
+                                
+                            <p></p>As someone who has taught React to hundreds of students in-person, I know what all of the common early stumbling blocks are, and we address them head-on in this module.</p>
+                                
+                            <p>We go surprisingly deep in this module. By the end of Module 1, you'll understand how JSX differs from a templating language, what a React element is, why keys are necessary… you'll even build your own stateless mini-React from scratch, so you know exactly how it works under-the-hood!</p>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-container">
+                            <img class="image1" src="image1.webp" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1>Section 3</h1>
+        </section>
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+        <script>
+            gsap.registerPlugin('ScrollTrigger');
+            let module1 = document.querySelector('.module-1'),
+                image1 = document.querySelector('.image1'),
+                image2 = document.querySelector('.image2');
+
+            let allImages = document.querySelectorAll('img');
+            allImages.forEach(function(image, index){
+                let x = 0;
+                switch (index) {
+                    case 0:
+                    x = 100
+                    break;
+                    case 1:
+                    x = -100
+                    break;
+                }
+                gsap.from(image, {
+                    x: x,
+                    opacity: 0,
+                    scale: 0.8,
+                    ease: 'sine.out',
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top center',
+                        end: '400px center',
+                        scrub: true,
+                        markers: true
+                    },
+                })
+            });
+
+            
+
+            
+        </script>
+    </body>
+</html>

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body> 
         <section>
             <h1>Section 1</h1>
         </section>
@@ -55,35 +55,22 @@
         <script>
             gsap.registerPlugin('ScrollTrigger');
             let module1 = document.querySelector('.module-1'),
-                image1 = document.querySelector('.image1'),
-                image2 = document.querySelector('.image2');
+                image1 = document.querySelector('.image1');
 
-            let allImages = document.querySelectorAll('img');
-            allImages.forEach(function(image, index){
-                let x = 0;
-                switch (index) {
-                    case 0:
-                    x = 100
-                    break;
-                    case 1:
-                    x = -100
-                    break;
-                }
-                gsap.from(image, {
-                    x: x,
-                    opacity: 0,
-                    scale: 0.8,
-                    ease: 'sine.out',
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: 'top center',
-                        end: '400px center',
-                        scrub: true,
-                        markers: true
-                    },
-                })
-            });
+            gsap.from(image1, {
+                x: x,
+                opacity: 0,
+                scale: 0.8,
+                ease: 'sine.out',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: module1,
+                    start: 'top center',
+                    end: '400px center',
+                    scrub: true,
+                    markers: true
+                },
+            })
 
             
 

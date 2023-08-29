@@ -25,6 +25,11 @@ section:nth-child(3) {
   font-weight: 700;
 }
 
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
 /* Utilities */
 .row {
   display: flex;

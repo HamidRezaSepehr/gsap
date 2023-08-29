@@ -23,7 +23,6 @@ section:nth-child(3) {
 .heading-1 {
   font-size: 100px;
   font-weight: 700;
-  overflow: break-word;
 }
 
 /* Utilities */

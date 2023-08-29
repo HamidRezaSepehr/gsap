@@ -55,8 +55,8 @@ article p {
 }
 
 .image-container {
-  width: 400px;
-  height: 400px;
+  width: 640px;
+  height: 640px;
   position: relative;
 }
 .image-container img {

@@ -6,7 +6,10 @@
         <title>GSAP Animation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="_reset.css">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +30,6 @@
                         <article>
                             <div class="module">Module 1</div>
                             <div class="heading-3">React Fundamentals</div>
-                            
-
                             <p>In this first module, we introduce React, and build a common understanding we'll use throughout the course.</p>
 
                             <p>We'll learn all about JSX, components, and props. We'll discover how to do iteration and conditional rendering in React. We'll also cover styling in React.</p>
@@ -43,26 +44,6 @@
                             <img class="image1" src="image1.webp" />
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section3">
-            <div class="container">
-                <div class="row module-2">
-                    <div class="col">
-                        <div class="heading-2">The</div>
-                        <h1 class="heading-1">Curriculum</h1>
-                        <article>
-                            <div class="module">Module 2</div>
-                            <div class="heading-3">Working with states</div>
-                            <p>The real magic starts with state. React state allows us to make dynamic applications that feel alive.</p>
-                            <p>In this module, we learn how to use event handlers and the React useState hook to update the UI based on user actions. We'll learn how to wire up forms, how to work with complex state structures, and how to manage state across the application.</p>
-                            <p>We'll also deepen our understanding of how React works. We'll learn why React sometimes feels so much more complicated than other frameworks. We'll discover the crucial role that React component instances play. And we'll learn how to leverage best practices like lifting state up.</p>
-                            <p>There are lots of fun exercises in this module. We build a couple of mini-games, and see how to build a minimal version of my Gradient Generator project.</p>
-                        </article>
-                    </div>
-                    <div class="col"></div>
                 </div>
             </div>
         </section>
@@ -88,7 +69,7 @@
                     start: 'top center',
                     end: '400px center',
                     scrub: false,
-                    markers: true
+                    // markers: true
                 },
             })
 
